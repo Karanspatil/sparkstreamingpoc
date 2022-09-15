@@ -60,8 +60,8 @@ if __name__=="__main__":
 
     # write this data in mysql
     def foreach_batch_function(df, epoch_id):
-        df.write.mode('append').format('jdbc').option('url','jdbc:mysql://karandb.cnhtjdwvatxj.ap-south-1.rds.amazonaws.com:3306/mysqldb?useSSL=false') \
-            .option('user', 'myuser').option('password', 'mypassword').option('dbtable', 'livefiledata2'). \
+        df.write.mode('append').format('jdbc').option('url','jdbc:mysql://karandxxxxx.ap-south-1.rds.amazonaws.com:3306/mysqldb?useSSL=false') \
+            .option('user', 'xxxxx').option('password', 'xxxxxxxxx').option('dbtable', 'livefiledata2'). \
             option('driver', 'com.mysql.jdbc.Driver').save()
 
 
