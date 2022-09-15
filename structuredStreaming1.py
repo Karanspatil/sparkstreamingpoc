@@ -23,9 +23,9 @@ res=ndf.select(regexp_extract('value',ex,1).alias("name"),regexp_extract('value'
 #res.writeStream.format("console").start().awaitTermination()
 ###write this into mysql db
 def foreach_batch_function(df, bid):
-  host="jdbc:mysql://karandb.cnhtjdwvatxj.ap-south-1.rds.amazonaws.com:3306/mysqldb?useSSL=false"
-  df.write.mode("append").format("jdbc").option("url",host).option("user","myuser")\
-    .option("password","mypassword").option("driver","com.mysql.jdbc.Driver")\
+  host="jdbc:mysql://karandbxxxxxxdwvatxj.ap-south-1.rds.amazonaws.com:3306/mysqldb?useSSL=false"
+  df.write.mode("append").format("jdbc").option("url",host).option("user","xxxx")\
+    .option("password","xxxxxx").option("driver","com.mysql.jdbc.Driver")\
     .option("dbtable","kafkadata").save()
 
   pass
